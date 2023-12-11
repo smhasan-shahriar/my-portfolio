@@ -1,60 +1,42 @@
-import React from "react";
-import { useForm, ValidationError } from '@formspree/react';
-function ContactForm() {
-  const [state, handleSubmit] = useForm("xleyqoqe");
-  if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
-  }
-  return (
-      <form onSubmit={handleSubmit}>
-      <label htmlFor="email">
-        Email Address
-      </label>
-      <input
-        id="email"
-        type="email" 
-        name="email"
-      />
-      <ValidationError 
-        prefix="Email" 
-        field="email"
-        errors={state.errors}
-      />
-      <textarea
-        id="message"
-        name="message"
-      />
-      <ValidationError 
-        prefix="Message" 
-        field="message"
-        errors={state.errors}
-      />
-      <button type="submit" disabled={state.submitting}>
-        Submit
-      </button>
-    </form>
-  );
-}
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-//   const handleContact = (e) => {
-//     e.preventDefault();
-//     const form = e.target;
-//     const name = form.name.value;
-//     const email = form.email.value;
-//     const number = form.number.value;
-//     const description = form.description.value;
-//     const customer = {name, email, number, description}
-//     console.log(customer)
+  const form = useRef();
 
-//   };
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_embe3hc",
+        "template_sehrzwv",
+        form.current,
+        "qUtYjIUv2eh_USeGp"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          if(result.text === "OK") {
+            toast('Email sent successfully')
+            const data = e.target;
+            data.reset();
+          }
+        },
+        (error) => {
+          toast(error.text)
+        }
+      );
+  };
   return (
     <div className="max-w-[1440px] min-h-screen mx-auto px-10">
       <h1 className="font-bold text-4xl my-10 mx-auto text-center">
         Contact Me
       </h1>
-      {/* <div>
-        <form onSubmit={handleContact}>
+      <div>
+        <form ref={form} onSubmit={sendEmail}>
           <label className="form-control w-full">
             <div className="label">
               <span className="label-text">Name</span>
@@ -96,6 +78,7 @@ const Contact = () => {
               <span className="label-text">Description</span>
             </div>
             <textarea
+              name="description"
               className="textarea textarea-bordered"
               placeholder="Description"
             ></textarea>
@@ -110,8 +93,7 @@ const Contact = () => {
             />
           </div>
         </form>
-      </div> */}
-       <ContactForm />
+      </div>
     </div>
   );
 };
