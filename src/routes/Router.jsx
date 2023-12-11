@@ -8,6 +8,7 @@ import EducationPage from "../pages/education/EducationPage";
 import About from "../pages/About";
 import ErrorPage from "../pages/ErrorPage";
 import Contact from "../pages/Contact";
+import Experience from "../pages/Experience";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         {
           path: "/contact",
           element: <Contact />
+        },
+        {
+          path: "/experience",
+          element: <Experience />
         }
       ],
     },
