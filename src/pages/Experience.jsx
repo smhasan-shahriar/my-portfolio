@@ -3,7 +3,7 @@ import developer from "../assets/developer.jpeg";
 
 const Experience = () => {
   return (
-    <div className="max-w-[1440px] mx-auto px-10">
+    <div className="max-w-[1440px] mx-auto px-10 min-h-screen">
       <h1 className="font-bold text-4xl my-10 mx-auto text-center">
         My Experience
       </h1>
@@ -13,8 +13,8 @@ const Experience = () => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">Apprentice Web Developer</h2>
-          <p>Programming Hero</p>
-          <p>Practice Projects</p>
+          <p className="ml-2 font-medium">Programming Hero</p>
+          <p className="ml-2 font-medium">Practice Projects:</p>
           <div className="overflow-x-auto">
             <table className="table">
               {/* head */}
@@ -37,9 +37,9 @@ const Experience = () => {
                       </div>
                     </div>
                   </td>
-                  <td>
+                  <td className="">
                     <img
-                      className="p-10 w-48"
+                      className="w-48"
                       src="https://skillicons.dev/icons?i=html,css"
                       alt="html"
                     />
@@ -57,12 +57,30 @@ const Experience = () => {
                   </td>
                   <td>
                     <img
-                      className="p-10 w-48"
+                      className="w-48"
                       src="https://skillicons.dev/icons?i=html,css"
                       alt="html"
                     />
                   </td>
                   <td>Responsive Landing Page</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <div className="flex items-center gap-3">
+                      <div>
+                        <div className="font-bold">Summer Sale</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <img
+                      className="w-72"
+                      src="https://skillicons.dev/icons?i=html,css,javascript"
+                      alt="html"
+                    />
+                  </td>
+                  <td>Responsive, DOM Manipulation</td>
                 </tr>
               </tbody>
             </table>

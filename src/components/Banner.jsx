@@ -12,9 +12,9 @@ const Banner = () => {
     >
       <div className="hero-overlay bg-opacity-70"></div>
       <div className="hero-content text-center text-neutral-content">
-        <div className="">
-          <h1 className="mb-5 text-7xl font-bold">S M Hasan Shahriar</h1>
-          <p className="mb-5 text-3xl">Junior Web Developer</p>
+        <div className="text-white">
+          <h1 className="mb-5 text-7xl text-white font-bold">S M Hasan Shahriar</h1>
+          <p className="mb-5 text-white text-3xl">Junior Web Developer</p>
           <p align="center">
             <a>
               <img src="https://skillicons.dev/icons?i=html,css,javascript,react,express,mongodb" />
