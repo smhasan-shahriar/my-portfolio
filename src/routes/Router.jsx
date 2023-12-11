@@ -6,11 +6,14 @@ import Projects from "../pages/Projects";
 import Skills from "../pages/Skills";
 import EducationPage from "../pages/education/EducationPage";
 import About from "../pages/About";
+import ErrorPage from "../pages/ErrorPage";
+import Contact from "../pages/Contact";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
@@ -31,6 +34,10 @@ const router = createBrowserRouter([
         {
           path: "/about",
           element: <About />
+        },
+        {
+          path: "/contact",
+          element: <Contact />
         }
       ],
     },
