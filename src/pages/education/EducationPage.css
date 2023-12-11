@@ -1,0 +1,47 @@
+.education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Make sure the container takes the full height of the viewport */
+  }
+  
+  .arrow-container {
+    position: relative;
+  }
+  
+  .arrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid black;
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .selected {
+    background-color: #3498db; /* Change the color as needed */
+    color: white;
+  }
+  
+  .education-item {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: filter 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  .education-item:not(.selected) {
+    filter: blur(3px); /* Adjust the blur value as needed */
+  }
+  
