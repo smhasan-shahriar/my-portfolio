@@ -6,7 +6,7 @@ import ssc from "../../assets/mub.jpeg"
 
 const EducationPage = () => {
   return (
-    <div className="max-w-[1440px] mx-auto px-10">
+    <div className="max-w-[1440px] min-h-screen mx-auto px-10">
       <h1 className="font-bold text-4xl my-10 mx-auto text-center">
         My Education
       </h1>

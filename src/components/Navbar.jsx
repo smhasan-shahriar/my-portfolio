@@ -1,16 +1,11 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import cv from '../assets/CV-hasan-shahriar.pdf'
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const handleDownload = () => {
-    const pdfUrl = cv;
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'resume-hasan-shahriar.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    toast("resume successfully downloaded")
   };
   const navLinks = (
     <>
@@ -71,7 +66,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn" onClick={handleDownload}>Download Resume</a>
+          <a  href={cv} download="resume-hasan-shahriar.pdf"  className="btn" onClick={handleDownload}>Download Resume</a>
         </div>
       </div>
     </div>
