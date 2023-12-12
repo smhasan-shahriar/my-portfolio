@@ -13,7 +13,6 @@ const Experience = () => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">Apprentice Web Developer</h2>
-          <p className="ml-2 font-medium">Programming Hero</p>
           <p className="ml-2 font-medium">Practice Projects:</p>
           <div className="overflow-x-auto">
             <table className="table">

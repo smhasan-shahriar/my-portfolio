@@ -1,7 +1,17 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import cv from '../assets/CV-hasan-shahriar.pdf'
 
 const Navbar = () => {
+  const handleDownload = () => {
+    const pdfUrl = cv;
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'resume-hasan-shahriar.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   const navLinks = (
     <>
       <li>
@@ -61,7 +71,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Download Resume</a>
+          <a className="btn" onClick={handleDownload}>Download Resume</a>
         </div>
       </div>
     </div>
