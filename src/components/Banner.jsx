@@ -3,7 +3,7 @@ import banner1 from "../assets/banner1.jpg";
 import ador from "../assets/ador.png";
 import './Animated.css'
 import { toast } from "react-toastify";
-import cv from '../assets/CV-hasan-shahriar.pdf'
+import cv from '../assets/Resume_SM Hasan Shahriar.pdf'
 import { Link } from "react-router-dom";
 
 const Banner = () => {
@@ -31,7 +31,7 @@ const Banner = () => {
           </p>
           <div>
           <Link to="/projects"><button className="btn my-5 btn-primary">View Latest Projects</button></Link>
-          <a  href={cv} download="resume-hasan-shahriar.pdf"  className="btn btn-primary ml-4" onClick={handleDownload}>Download Resume</a>
+          <a  href={cv} download="Resume_SM Hasan Shahriar.pdf"  className="btn btn-primary ml-4" onClick={handleDownload}>Download Resume</a>
         </div>
         </div>
         
